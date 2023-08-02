@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <!--    đặt tên cho thẻ fragment sử dụng trong navigation   -->
+    <!--    định nghĩa splash trong navigation   -->
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.thuctran.testnavigation.view.fragment.SplashFragment"
+        android:label="@string/txt_splash"
+        app:route="@string/txt_splash"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/toHome"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.thuctran.testnavigation.view.fragment.HomeFragment"
+        android:label="@string/txt_home"
+        app:route="@string/txt_home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/toDetail"
+            app:destination="@id/detailFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.thuctran.testnavigation.view.fragment.DetailFragment"
+        android:label="@string/txt_detail"
+        app:route="@string/txt_detail"
+        tools:layout="@layout/fragment_detail" />
+</navigation>

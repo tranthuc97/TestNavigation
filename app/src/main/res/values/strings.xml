@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">TestNavigation</string>
+    <string name="txt_splash">Splash</string>
+    <string name="txt_main">Main</string>
+    <string name="txt_detail">Detail</string>
+    <string name="txt_home">Home</string>
+    <string name="txt_animal_cute_moment">Animal cute moment</string>
+</resources>
